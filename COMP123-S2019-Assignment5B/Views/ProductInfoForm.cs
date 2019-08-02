@@ -16,5 +16,22 @@ namespace COMP123_S2019_Assignment5B.Views
         {
             InitializeComponent();
         }
+
+        private void CancelButton_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
+        }
+
+        private void NextButton_Click(object sender, EventArgs e)
+        {
+            Program.orderForm.Show();
+            this.Hide();
+        }
+
+        private void SelectNewButton_Click(object sender, EventArgs e)
+        {
+            Program.selectForm.Show();
+            this.Hide();
+        }
     }
 }

@@ -16,5 +16,25 @@ namespace COMP123_S2019_Assignment5B.Views
         {
             InitializeComponent();
         }
+
+        private void StartForm_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            CloseApplication();
+        }
+
+        private void ExitButton_Click(object sender, EventArgs e)
+        {
+            CloseApplication();
+        }
+        private static void CloseApplication()
+        {
+            Application.Exit();
+        }
+
+        private void NewOrderButton_Click(object sender, EventArgs e)
+        {   
+            Program.selectForm.Show();
+            this.Hide();
+        }
     }
 }

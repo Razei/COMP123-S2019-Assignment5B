@@ -28,5 +28,21 @@ namespace COMP123_S2019_Assignment5B
         {
             Application.Exit();
         }
+
+        private void FormCancelButton_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
+        }
+
+        private void FinButton_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
+        }
+
+        private void BackButton_Click(object sender, EventArgs e)
+        {
+            Program.productInfoForm.Show();
+            this.Hide();
+        }
     }
 }

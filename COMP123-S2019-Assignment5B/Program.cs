@@ -39,7 +39,7 @@ namespace COMP123_S2019_Assignment5B
             product = new Product();
 
 
-            Application.Run(selectForm);
+            Application.Run(splashForm);
         }
     }
 }

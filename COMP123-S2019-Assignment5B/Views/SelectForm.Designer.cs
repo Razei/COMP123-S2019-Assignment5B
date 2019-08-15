@@ -31,6 +31,15 @@
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(SelectForm));
             this.ProductDataGridView = new System.Windows.Forms.DataGridView();
+            this.productBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.productsBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.dollarComputersDataSet = new COMP123_S2019_Assignment5B.DollarComputersDataSet();
+            this.productsTableAdapter = new COMP123_S2019_Assignment5B.DollarComputersDataSetTableAdapters.productsTableAdapter();
+            this.NextButton = new System.Windows.Forms.Button();
+            this.FormCancelButton = new System.Windows.Forms.Button();
+            this.HardwareListLabel = new System.Windows.Forms.Label();
+            this.SelectionLabel = new System.Windows.Forms.Label();
+            this.label1 = new System.Windows.Forms.Label();
             this.productIDDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.costDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.manufacturerDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -62,15 +71,6 @@
             this.mousttypeDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.powerDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.webcamDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.productBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.productsBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.dollarComputersDataSet = new COMP123_S2019_Assignment5B.DollarComputersDataSet();
-            this.productsTableAdapter = new COMP123_S2019_Assignment5B.DollarComputersDataSetTableAdapters.productsTableAdapter();
-            this.NextButton = new System.Windows.Forms.Button();
-            this.FormCancelButton = new System.Windows.Forms.Button();
-            this.HardwareListLabel = new System.Windows.Forms.Label();
-            this.SelectionLabel = new System.Windows.Forms.Label();
-            this.label1 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.ProductDataGridView)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.productBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.productsBindingSource)).BeginInit();
@@ -130,254 +130,6 @@
             this.ProductDataGridView.Size = new System.Drawing.Size(1216, 534);
             this.ProductDataGridView.TabIndex = 0;
             this.ProductDataGridView.SelectionChanged += new System.EventHandler(this.ProductDataGridView_SelectionChanged);
-            // 
-            // productIDDataGridViewTextBoxColumn
-            // 
-            this.productIDDataGridViewTextBoxColumn.DataPropertyName = "productID";
-            this.productIDDataGridViewTextBoxColumn.HeaderText = "productID";
-            this.productIDDataGridViewTextBoxColumn.Name = "productIDDataGridViewTextBoxColumn";
-            this.productIDDataGridViewTextBoxColumn.ReadOnly = true;
-            this.productIDDataGridViewTextBoxColumn.Width = 105;
-            // 
-            // costDataGridViewTextBoxColumn
-            // 
-            this.costDataGridViewTextBoxColumn.DataPropertyName = "cost";
-            this.costDataGridViewTextBoxColumn.HeaderText = "cost";
-            this.costDataGridViewTextBoxColumn.Name = "costDataGridViewTextBoxColumn";
-            this.costDataGridViewTextBoxColumn.ReadOnly = true;
-            this.costDataGridViewTextBoxColumn.Width = 64;
-            // 
-            // manufacturerDataGridViewTextBoxColumn
-            // 
-            this.manufacturerDataGridViewTextBoxColumn.DataPropertyName = "manufacturer";
-            this.manufacturerDataGridViewTextBoxColumn.HeaderText = "manufacturer";
-            this.manufacturerDataGridViewTextBoxColumn.Name = "manufacturerDataGridViewTextBoxColumn";
-            this.manufacturerDataGridViewTextBoxColumn.ReadOnly = true;
-            this.manufacturerDataGridViewTextBoxColumn.Width = 129;
-            // 
-            // modelDataGridViewTextBoxColumn
-            // 
-            this.modelDataGridViewTextBoxColumn.DataPropertyName = "model";
-            this.modelDataGridViewTextBoxColumn.HeaderText = "model";
-            this.modelDataGridViewTextBoxColumn.Name = "modelDataGridViewTextBoxColumn";
-            this.modelDataGridViewTextBoxColumn.ReadOnly = true;
-            this.modelDataGridViewTextBoxColumn.Width = 77;
-            // 
-            // rAMtypeDataGridViewTextBoxColumn
-            // 
-            this.rAMtypeDataGridViewTextBoxColumn.DataPropertyName = "RAM_type";
-            this.rAMtypeDataGridViewTextBoxColumn.HeaderText = "RAM_type";
-            this.rAMtypeDataGridViewTextBoxColumn.Name = "rAMtypeDataGridViewTextBoxColumn";
-            this.rAMtypeDataGridViewTextBoxColumn.ReadOnly = true;
-            this.rAMtypeDataGridViewTextBoxColumn.Width = 109;
-            // 
-            // rAMsizeDataGridViewTextBoxColumn
-            // 
-            this.rAMsizeDataGridViewTextBoxColumn.DataPropertyName = "RAM_size";
-            this.rAMsizeDataGridViewTextBoxColumn.HeaderText = "RAM_size";
-            this.rAMsizeDataGridViewTextBoxColumn.Name = "rAMsizeDataGridViewTextBoxColumn";
-            this.rAMsizeDataGridViewTextBoxColumn.ReadOnly = true;
-            this.rAMsizeDataGridViewTextBoxColumn.Width = 107;
-            // 
-            // displaytypeDataGridViewTextBoxColumn
-            // 
-            this.displaytypeDataGridViewTextBoxColumn.DataPropertyName = "displaytype";
-            this.displaytypeDataGridViewTextBoxColumn.HeaderText = "displaytype";
-            this.displaytypeDataGridViewTextBoxColumn.Name = "displaytypeDataGridViewTextBoxColumn";
-            this.displaytypeDataGridViewTextBoxColumn.ReadOnly = true;
-            this.displaytypeDataGridViewTextBoxColumn.Width = 112;
-            // 
-            // screensizeDataGridViewTextBoxColumn
-            // 
-            this.screensizeDataGridViewTextBoxColumn.DataPropertyName = "screensize";
-            this.screensizeDataGridViewTextBoxColumn.HeaderText = "screensize";
-            this.screensizeDataGridViewTextBoxColumn.Name = "screensizeDataGridViewTextBoxColumn";
-            this.screensizeDataGridViewTextBoxColumn.ReadOnly = true;
-            this.screensizeDataGridViewTextBoxColumn.Width = 110;
-            // 
-            // resolutionDataGridViewTextBoxColumn
-            // 
-            this.resolutionDataGridViewTextBoxColumn.DataPropertyName = "resolution";
-            this.resolutionDataGridViewTextBoxColumn.HeaderText = "resolution";
-            this.resolutionDataGridViewTextBoxColumn.Name = "resolutionDataGridViewTextBoxColumn";
-            this.resolutionDataGridViewTextBoxColumn.ReadOnly = true;
-            this.resolutionDataGridViewTextBoxColumn.Width = 103;
-            // 
-            // cPUClassDataGridViewTextBoxColumn
-            // 
-            this.cPUClassDataGridViewTextBoxColumn.DataPropertyName = "CPU_Class";
-            this.cPUClassDataGridViewTextBoxColumn.HeaderText = "CPU_Class";
-            this.cPUClassDataGridViewTextBoxColumn.Name = "cPUClassDataGridViewTextBoxColumn";
-            this.cPUClassDataGridViewTextBoxColumn.ReadOnly = true;
-            this.cPUClassDataGridViewTextBoxColumn.Width = 115;
-            // 
-            // cPUbrandDataGridViewTextBoxColumn
-            // 
-            this.cPUbrandDataGridViewTextBoxColumn.DataPropertyName = "CPU_brand";
-            this.cPUbrandDataGridViewTextBoxColumn.HeaderText = "CPU_brand";
-            this.cPUbrandDataGridViewTextBoxColumn.Name = "cPUbrandDataGridViewTextBoxColumn";
-            this.cPUbrandDataGridViewTextBoxColumn.ReadOnly = true;
-            this.cPUbrandDataGridViewTextBoxColumn.Width = 117;
-            // 
-            // cPUtypeDataGridViewTextBoxColumn
-            // 
-            this.cPUtypeDataGridViewTextBoxColumn.DataPropertyName = "CPU_type";
-            this.cPUtypeDataGridViewTextBoxColumn.HeaderText = "CPU_type";
-            this.cPUtypeDataGridViewTextBoxColumn.Name = "cPUtypeDataGridViewTextBoxColumn";
-            this.cPUtypeDataGridViewTextBoxColumn.ReadOnly = true;
-            this.cPUtypeDataGridViewTextBoxColumn.Width = 106;
-            // 
-            // cPUspeedDataGridViewTextBoxColumn
-            // 
-            this.cPUspeedDataGridViewTextBoxColumn.DataPropertyName = "CPU_speed";
-            this.cPUspeedDataGridViewTextBoxColumn.HeaderText = "CPU_speed";
-            this.cPUspeedDataGridViewTextBoxColumn.Name = "cPUspeedDataGridViewTextBoxColumn";
-            this.cPUspeedDataGridViewTextBoxColumn.ReadOnly = true;
-            this.cPUspeedDataGridViewTextBoxColumn.Width = 120;
-            // 
-            // cPUnumberDataGridViewTextBoxColumn
-            // 
-            this.cPUnumberDataGridViewTextBoxColumn.DataPropertyName = "CPU_number";
-            this.cPUnumberDataGridViewTextBoxColumn.HeaderText = "CPU_number";
-            this.cPUnumberDataGridViewTextBoxColumn.Name = "cPUnumberDataGridViewTextBoxColumn";
-            this.cPUnumberDataGridViewTextBoxColumn.ReadOnly = true;
-            this.cPUnumberDataGridViewTextBoxColumn.Width = 130;
-            // 
-            // conditionDataGridViewTextBoxColumn
-            // 
-            this.conditionDataGridViewTextBoxColumn.DataPropertyName = "condition";
-            this.conditionDataGridViewTextBoxColumn.HeaderText = "condition";
-            this.conditionDataGridViewTextBoxColumn.Name = "conditionDataGridViewTextBoxColumn";
-            this.conditionDataGridViewTextBoxColumn.ReadOnly = true;
-            this.conditionDataGridViewTextBoxColumn.Width = 98;
-            // 
-            // oSDataGridViewTextBoxColumn
-            // 
-            this.oSDataGridViewTextBoxColumn.DataPropertyName = "OS";
-            this.oSDataGridViewTextBoxColumn.HeaderText = "OS";
-            this.oSDataGridViewTextBoxColumn.Name = "oSDataGridViewTextBoxColumn";
-            this.oSDataGridViewTextBoxColumn.ReadOnly = true;
-            this.oSDataGridViewTextBoxColumn.Width = 57;
-            // 
-            // platformDataGridViewTextBoxColumn
-            // 
-            this.platformDataGridViewTextBoxColumn.DataPropertyName = "platform";
-            this.platformDataGridViewTextBoxColumn.HeaderText = "platform";
-            this.platformDataGridViewTextBoxColumn.Name = "platformDataGridViewTextBoxColumn";
-            this.platformDataGridViewTextBoxColumn.ReadOnly = true;
-            this.platformDataGridViewTextBoxColumn.Width = 92;
-            // 
-            // hDDsizeDataGridViewTextBoxColumn
-            // 
-            this.hDDsizeDataGridViewTextBoxColumn.DataPropertyName = "HDD_size";
-            this.hDDsizeDataGridViewTextBoxColumn.HeaderText = "HDD_size";
-            this.hDDsizeDataGridViewTextBoxColumn.Name = "hDDsizeDataGridViewTextBoxColumn";
-            this.hDDsizeDataGridViewTextBoxColumn.ReadOnly = true;
-            this.hDDsizeDataGridViewTextBoxColumn.Width = 107;
-            // 
-            // hDDspeedDataGridViewTextBoxColumn
-            // 
-            this.hDDspeedDataGridViewTextBoxColumn.DataPropertyName = "HDD_speed";
-            this.hDDspeedDataGridViewTextBoxColumn.HeaderText = "HDD_speed";
-            this.hDDspeedDataGridViewTextBoxColumn.Name = "hDDspeedDataGridViewTextBoxColumn";
-            this.hDDspeedDataGridViewTextBoxColumn.ReadOnly = true;
-            this.hDDspeedDataGridViewTextBoxColumn.Width = 123;
-            // 
-            // gPUTypeDataGridViewTextBoxColumn
-            // 
-            this.gPUTypeDataGridViewTextBoxColumn.DataPropertyName = "GPU_Type";
-            this.gPUTypeDataGridViewTextBoxColumn.HeaderText = "GPU_Type";
-            this.gPUTypeDataGridViewTextBoxColumn.Name = "gPUTypeDataGridViewTextBoxColumn";
-            this.gPUTypeDataGridViewTextBoxColumn.ReadOnly = true;
-            this.gPUTypeDataGridViewTextBoxColumn.Width = 112;
-            // 
-            // opticaldriveDataGridViewTextBoxColumn
-            // 
-            this.opticaldriveDataGridViewTextBoxColumn.DataPropertyName = "optical_drive";
-            this.opticaldriveDataGridViewTextBoxColumn.HeaderText = "optical_drive";
-            this.opticaldriveDataGridViewTextBoxColumn.Name = "opticaldriveDataGridViewTextBoxColumn";
-            this.opticaldriveDataGridViewTextBoxColumn.ReadOnly = true;
-            this.opticaldriveDataGridViewTextBoxColumn.Width = 122;
-            // 
-            // audiotypeDataGridViewTextBoxColumn
-            // 
-            this.audiotypeDataGridViewTextBoxColumn.DataPropertyName = "Audio_type";
-            this.audiotypeDataGridViewTextBoxColumn.HeaderText = "Audio_type";
-            this.audiotypeDataGridViewTextBoxColumn.Name = "audiotypeDataGridViewTextBoxColumn";
-            this.audiotypeDataGridViewTextBoxColumn.ReadOnly = true;
-            this.audiotypeDataGridViewTextBoxColumn.Width = 114;
-            // 
-            // lANDataGridViewTextBoxColumn
-            // 
-            this.lANDataGridViewTextBoxColumn.DataPropertyName = "LAN";
-            this.lANDataGridViewTextBoxColumn.HeaderText = "LAN";
-            this.lANDataGridViewTextBoxColumn.Name = "lANDataGridViewTextBoxColumn";
-            this.lANDataGridViewTextBoxColumn.ReadOnly = true;
-            this.lANDataGridViewTextBoxColumn.Width = 65;
-            // 
-            // wIFIDataGridViewTextBoxColumn
-            // 
-            this.wIFIDataGridViewTextBoxColumn.DataPropertyName = "WIFI";
-            this.wIFIDataGridViewTextBoxColumn.HeaderText = "WIFI";
-            this.wIFIDataGridViewTextBoxColumn.Name = "wIFIDataGridViewTextBoxColumn";
-            this.wIFIDataGridViewTextBoxColumn.ReadOnly = true;
-            this.wIFIDataGridViewTextBoxColumn.Width = 69;
-            // 
-            // widthDataGridViewTextBoxColumn
-            // 
-            this.widthDataGridViewTextBoxColumn.DataPropertyName = "width";
-            this.widthDataGridViewTextBoxColumn.HeaderText = "width";
-            this.widthDataGridViewTextBoxColumn.Name = "widthDataGridViewTextBoxColumn";
-            this.widthDataGridViewTextBoxColumn.ReadOnly = true;
-            this.widthDataGridViewTextBoxColumn.Width = 71;
-            // 
-            // heightDataGridViewTextBoxColumn
-            // 
-            this.heightDataGridViewTextBoxColumn.DataPropertyName = "height";
-            this.heightDataGridViewTextBoxColumn.HeaderText = "height";
-            this.heightDataGridViewTextBoxColumn.Name = "heightDataGridViewTextBoxColumn";
-            this.heightDataGridViewTextBoxColumn.ReadOnly = true;
-            this.heightDataGridViewTextBoxColumn.Width = 78;
-            // 
-            // depthDataGridViewTextBoxColumn
-            // 
-            this.depthDataGridViewTextBoxColumn.DataPropertyName = "depth";
-            this.depthDataGridViewTextBoxColumn.HeaderText = "depth";
-            this.depthDataGridViewTextBoxColumn.Name = "depthDataGridViewTextBoxColumn";
-            this.depthDataGridViewTextBoxColumn.ReadOnly = true;
-            this.depthDataGridViewTextBoxColumn.Width = 75;
-            // 
-            // weightDataGridViewTextBoxColumn
-            // 
-            this.weightDataGridViewTextBoxColumn.DataPropertyName = "weight";
-            this.weightDataGridViewTextBoxColumn.HeaderText = "weight";
-            this.weightDataGridViewTextBoxColumn.Name = "weightDataGridViewTextBoxColumn";
-            this.weightDataGridViewTextBoxColumn.ReadOnly = true;
-            this.weightDataGridViewTextBoxColumn.Width = 80;
-            // 
-            // mousttypeDataGridViewTextBoxColumn
-            // 
-            this.mousttypeDataGridViewTextBoxColumn.DataPropertyName = "moust_type";
-            this.mousttypeDataGridViewTextBoxColumn.HeaderText = "moust_type";
-            this.mousttypeDataGridViewTextBoxColumn.Name = "mousttypeDataGridViewTextBoxColumn";
-            this.mousttypeDataGridViewTextBoxColumn.ReadOnly = true;
-            this.mousttypeDataGridViewTextBoxColumn.Width = 117;
-            // 
-            // powerDataGridViewTextBoxColumn
-            // 
-            this.powerDataGridViewTextBoxColumn.DataPropertyName = "power";
-            this.powerDataGridViewTextBoxColumn.HeaderText = "power";
-            this.powerDataGridViewTextBoxColumn.Name = "powerDataGridViewTextBoxColumn";
-            this.powerDataGridViewTextBoxColumn.ReadOnly = true;
-            this.powerDataGridViewTextBoxColumn.Width = 77;
-            // 
-            // webcamDataGridViewTextBoxColumn
-            // 
-            this.webcamDataGridViewTextBoxColumn.DataPropertyName = "webcam";
-            this.webcamDataGridViewTextBoxColumn.HeaderText = "webcam";
-            this.webcamDataGridViewTextBoxColumn.Name = "webcamDataGridViewTextBoxColumn";
-            this.webcamDataGridViewTextBoxColumn.ReadOnly = true;
-            this.webcamDataGridViewTextBoxColumn.Width = 93;
             // 
             // productBindingSource
             // 
@@ -446,6 +198,285 @@
             this.label1.TabIndex = 2;
             this.label1.Text = "Selection:";
             // 
+            // productIDDataGridViewTextBoxColumn
+            // 
+            this.productIDDataGridViewTextBoxColumn.DataPropertyName = "productID";
+            this.productIDDataGridViewTextBoxColumn.HeaderText = "productID";
+            this.productIDDataGridViewTextBoxColumn.Name = "productIDDataGridViewTextBoxColumn";
+            this.productIDDataGridViewTextBoxColumn.ReadOnly = true;
+            this.productIDDataGridViewTextBoxColumn.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
+            this.productIDDataGridViewTextBoxColumn.Width = 86;
+            // 
+            // costDataGridViewTextBoxColumn
+            // 
+            this.costDataGridViewTextBoxColumn.DataPropertyName = "cost";
+            this.costDataGridViewTextBoxColumn.HeaderText = "cost";
+            this.costDataGridViewTextBoxColumn.Name = "costDataGridViewTextBoxColumn";
+            this.costDataGridViewTextBoxColumn.ReadOnly = true;
+            this.costDataGridViewTextBoxColumn.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
+            this.costDataGridViewTextBoxColumn.Width = 45;
+            // 
+            // manufacturerDataGridViewTextBoxColumn
+            // 
+            this.manufacturerDataGridViewTextBoxColumn.DataPropertyName = "manufacturer";
+            this.manufacturerDataGridViewTextBoxColumn.HeaderText = "manufacturer";
+            this.manufacturerDataGridViewTextBoxColumn.Name = "manufacturerDataGridViewTextBoxColumn";
+            this.manufacturerDataGridViewTextBoxColumn.ReadOnly = true;
+            this.manufacturerDataGridViewTextBoxColumn.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
+            this.manufacturerDataGridViewTextBoxColumn.Width = 110;
+            // 
+            // modelDataGridViewTextBoxColumn
+            // 
+            this.modelDataGridViewTextBoxColumn.DataPropertyName = "model";
+            this.modelDataGridViewTextBoxColumn.HeaderText = "model";
+            this.modelDataGridViewTextBoxColumn.Name = "modelDataGridViewTextBoxColumn";
+            this.modelDataGridViewTextBoxColumn.ReadOnly = true;
+            this.modelDataGridViewTextBoxColumn.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
+            this.modelDataGridViewTextBoxColumn.Width = 58;
+            // 
+            // rAMtypeDataGridViewTextBoxColumn
+            // 
+            this.rAMtypeDataGridViewTextBoxColumn.DataPropertyName = "RAM_type";
+            this.rAMtypeDataGridViewTextBoxColumn.HeaderText = "RAM_type";
+            this.rAMtypeDataGridViewTextBoxColumn.Name = "rAMtypeDataGridViewTextBoxColumn";
+            this.rAMtypeDataGridViewTextBoxColumn.ReadOnly = true;
+            this.rAMtypeDataGridViewTextBoxColumn.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
+            this.rAMtypeDataGridViewTextBoxColumn.Width = 90;
+            // 
+            // rAMsizeDataGridViewTextBoxColumn
+            // 
+            this.rAMsizeDataGridViewTextBoxColumn.DataPropertyName = "RAM_size";
+            this.rAMsizeDataGridViewTextBoxColumn.HeaderText = "RAM_size";
+            this.rAMsizeDataGridViewTextBoxColumn.Name = "rAMsizeDataGridViewTextBoxColumn";
+            this.rAMsizeDataGridViewTextBoxColumn.ReadOnly = true;
+            this.rAMsizeDataGridViewTextBoxColumn.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
+            this.rAMsizeDataGridViewTextBoxColumn.Width = 88;
+            // 
+            // displaytypeDataGridViewTextBoxColumn
+            // 
+            this.displaytypeDataGridViewTextBoxColumn.DataPropertyName = "displaytype";
+            this.displaytypeDataGridViewTextBoxColumn.HeaderText = "displaytype";
+            this.displaytypeDataGridViewTextBoxColumn.Name = "displaytypeDataGridViewTextBoxColumn";
+            this.displaytypeDataGridViewTextBoxColumn.ReadOnly = true;
+            this.displaytypeDataGridViewTextBoxColumn.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
+            this.displaytypeDataGridViewTextBoxColumn.Width = 93;
+            // 
+            // screensizeDataGridViewTextBoxColumn
+            // 
+            this.screensizeDataGridViewTextBoxColumn.DataPropertyName = "screensize";
+            this.screensizeDataGridViewTextBoxColumn.HeaderText = "screensize";
+            this.screensizeDataGridViewTextBoxColumn.Name = "screensizeDataGridViewTextBoxColumn";
+            this.screensizeDataGridViewTextBoxColumn.ReadOnly = true;
+            this.screensizeDataGridViewTextBoxColumn.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
+            this.screensizeDataGridViewTextBoxColumn.Width = 91;
+            // 
+            // resolutionDataGridViewTextBoxColumn
+            // 
+            this.resolutionDataGridViewTextBoxColumn.DataPropertyName = "resolution";
+            this.resolutionDataGridViewTextBoxColumn.HeaderText = "resolution";
+            this.resolutionDataGridViewTextBoxColumn.Name = "resolutionDataGridViewTextBoxColumn";
+            this.resolutionDataGridViewTextBoxColumn.ReadOnly = true;
+            this.resolutionDataGridViewTextBoxColumn.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
+            this.resolutionDataGridViewTextBoxColumn.Width = 84;
+            // 
+            // cPUClassDataGridViewTextBoxColumn
+            // 
+            this.cPUClassDataGridViewTextBoxColumn.DataPropertyName = "CPU_Class";
+            this.cPUClassDataGridViewTextBoxColumn.HeaderText = "CPU_Class";
+            this.cPUClassDataGridViewTextBoxColumn.Name = "cPUClassDataGridViewTextBoxColumn";
+            this.cPUClassDataGridViewTextBoxColumn.ReadOnly = true;
+            this.cPUClassDataGridViewTextBoxColumn.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
+            this.cPUClassDataGridViewTextBoxColumn.Width = 96;
+            // 
+            // cPUbrandDataGridViewTextBoxColumn
+            // 
+            this.cPUbrandDataGridViewTextBoxColumn.DataPropertyName = "CPU_brand";
+            this.cPUbrandDataGridViewTextBoxColumn.HeaderText = "CPU_brand";
+            this.cPUbrandDataGridViewTextBoxColumn.Name = "cPUbrandDataGridViewTextBoxColumn";
+            this.cPUbrandDataGridViewTextBoxColumn.ReadOnly = true;
+            this.cPUbrandDataGridViewTextBoxColumn.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
+            this.cPUbrandDataGridViewTextBoxColumn.Width = 98;
+            // 
+            // cPUtypeDataGridViewTextBoxColumn
+            // 
+            this.cPUtypeDataGridViewTextBoxColumn.DataPropertyName = "CPU_type";
+            this.cPUtypeDataGridViewTextBoxColumn.HeaderText = "CPU_type";
+            this.cPUtypeDataGridViewTextBoxColumn.Name = "cPUtypeDataGridViewTextBoxColumn";
+            this.cPUtypeDataGridViewTextBoxColumn.ReadOnly = true;
+            this.cPUtypeDataGridViewTextBoxColumn.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
+            this.cPUtypeDataGridViewTextBoxColumn.Width = 87;
+            // 
+            // cPUspeedDataGridViewTextBoxColumn
+            // 
+            this.cPUspeedDataGridViewTextBoxColumn.DataPropertyName = "CPU_speed";
+            this.cPUspeedDataGridViewTextBoxColumn.HeaderText = "CPU_speed";
+            this.cPUspeedDataGridViewTextBoxColumn.Name = "cPUspeedDataGridViewTextBoxColumn";
+            this.cPUspeedDataGridViewTextBoxColumn.ReadOnly = true;
+            this.cPUspeedDataGridViewTextBoxColumn.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
+            this.cPUspeedDataGridViewTextBoxColumn.Width = 101;
+            // 
+            // cPUnumberDataGridViewTextBoxColumn
+            // 
+            this.cPUnumberDataGridViewTextBoxColumn.DataPropertyName = "CPU_number";
+            this.cPUnumberDataGridViewTextBoxColumn.HeaderText = "CPU_number";
+            this.cPUnumberDataGridViewTextBoxColumn.Name = "cPUnumberDataGridViewTextBoxColumn";
+            this.cPUnumberDataGridViewTextBoxColumn.ReadOnly = true;
+            this.cPUnumberDataGridViewTextBoxColumn.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
+            this.cPUnumberDataGridViewTextBoxColumn.Width = 111;
+            // 
+            // conditionDataGridViewTextBoxColumn
+            // 
+            this.conditionDataGridViewTextBoxColumn.DataPropertyName = "condition";
+            this.conditionDataGridViewTextBoxColumn.HeaderText = "condition";
+            this.conditionDataGridViewTextBoxColumn.Name = "conditionDataGridViewTextBoxColumn";
+            this.conditionDataGridViewTextBoxColumn.ReadOnly = true;
+            this.conditionDataGridViewTextBoxColumn.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
+            this.conditionDataGridViewTextBoxColumn.Width = 79;
+            // 
+            // oSDataGridViewTextBoxColumn
+            // 
+            this.oSDataGridViewTextBoxColumn.DataPropertyName = "OS";
+            this.oSDataGridViewTextBoxColumn.HeaderText = "OS";
+            this.oSDataGridViewTextBoxColumn.Name = "oSDataGridViewTextBoxColumn";
+            this.oSDataGridViewTextBoxColumn.ReadOnly = true;
+            this.oSDataGridViewTextBoxColumn.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
+            this.oSDataGridViewTextBoxColumn.Width = 38;
+            // 
+            // platformDataGridViewTextBoxColumn
+            // 
+            this.platformDataGridViewTextBoxColumn.DataPropertyName = "platform";
+            this.platformDataGridViewTextBoxColumn.HeaderText = "platform";
+            this.platformDataGridViewTextBoxColumn.Name = "platformDataGridViewTextBoxColumn";
+            this.platformDataGridViewTextBoxColumn.ReadOnly = true;
+            this.platformDataGridViewTextBoxColumn.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
+            this.platformDataGridViewTextBoxColumn.Width = 73;
+            // 
+            // hDDsizeDataGridViewTextBoxColumn
+            // 
+            this.hDDsizeDataGridViewTextBoxColumn.DataPropertyName = "HDD_size";
+            this.hDDsizeDataGridViewTextBoxColumn.HeaderText = "HDD_size";
+            this.hDDsizeDataGridViewTextBoxColumn.Name = "hDDsizeDataGridViewTextBoxColumn";
+            this.hDDsizeDataGridViewTextBoxColumn.ReadOnly = true;
+            this.hDDsizeDataGridViewTextBoxColumn.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
+            this.hDDsizeDataGridViewTextBoxColumn.Width = 88;
+            // 
+            // hDDspeedDataGridViewTextBoxColumn
+            // 
+            this.hDDspeedDataGridViewTextBoxColumn.DataPropertyName = "HDD_speed";
+            this.hDDspeedDataGridViewTextBoxColumn.HeaderText = "HDD_speed";
+            this.hDDspeedDataGridViewTextBoxColumn.Name = "hDDspeedDataGridViewTextBoxColumn";
+            this.hDDspeedDataGridViewTextBoxColumn.ReadOnly = true;
+            this.hDDspeedDataGridViewTextBoxColumn.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
+            this.hDDspeedDataGridViewTextBoxColumn.Width = 104;
+            // 
+            // gPUTypeDataGridViewTextBoxColumn
+            // 
+            this.gPUTypeDataGridViewTextBoxColumn.DataPropertyName = "GPU_Type";
+            this.gPUTypeDataGridViewTextBoxColumn.HeaderText = "GPU_Type";
+            this.gPUTypeDataGridViewTextBoxColumn.Name = "gPUTypeDataGridViewTextBoxColumn";
+            this.gPUTypeDataGridViewTextBoxColumn.ReadOnly = true;
+            this.gPUTypeDataGridViewTextBoxColumn.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
+            this.gPUTypeDataGridViewTextBoxColumn.Width = 93;
+            // 
+            // opticaldriveDataGridViewTextBoxColumn
+            // 
+            this.opticaldriveDataGridViewTextBoxColumn.DataPropertyName = "optical_drive";
+            this.opticaldriveDataGridViewTextBoxColumn.HeaderText = "optical_drive";
+            this.opticaldriveDataGridViewTextBoxColumn.Name = "opticaldriveDataGridViewTextBoxColumn";
+            this.opticaldriveDataGridViewTextBoxColumn.ReadOnly = true;
+            this.opticaldriveDataGridViewTextBoxColumn.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
+            this.opticaldriveDataGridViewTextBoxColumn.Width = 103;
+            // 
+            // audiotypeDataGridViewTextBoxColumn
+            // 
+            this.audiotypeDataGridViewTextBoxColumn.DataPropertyName = "Audio_type";
+            this.audiotypeDataGridViewTextBoxColumn.HeaderText = "Audio_type";
+            this.audiotypeDataGridViewTextBoxColumn.Name = "audiotypeDataGridViewTextBoxColumn";
+            this.audiotypeDataGridViewTextBoxColumn.ReadOnly = true;
+            this.audiotypeDataGridViewTextBoxColumn.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
+            this.audiotypeDataGridViewTextBoxColumn.Width = 95;
+            // 
+            // lANDataGridViewTextBoxColumn
+            // 
+            this.lANDataGridViewTextBoxColumn.DataPropertyName = "LAN";
+            this.lANDataGridViewTextBoxColumn.HeaderText = "LAN";
+            this.lANDataGridViewTextBoxColumn.Name = "lANDataGridViewTextBoxColumn";
+            this.lANDataGridViewTextBoxColumn.ReadOnly = true;
+            this.lANDataGridViewTextBoxColumn.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
+            this.lANDataGridViewTextBoxColumn.Width = 46;
+            // 
+            // wIFIDataGridViewTextBoxColumn
+            // 
+            this.wIFIDataGridViewTextBoxColumn.DataPropertyName = "WIFI";
+            this.wIFIDataGridViewTextBoxColumn.HeaderText = "WIFI";
+            this.wIFIDataGridViewTextBoxColumn.Name = "wIFIDataGridViewTextBoxColumn";
+            this.wIFIDataGridViewTextBoxColumn.ReadOnly = true;
+            this.wIFIDataGridViewTextBoxColumn.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
+            this.wIFIDataGridViewTextBoxColumn.Width = 50;
+            // 
+            // widthDataGridViewTextBoxColumn
+            // 
+            this.widthDataGridViewTextBoxColumn.DataPropertyName = "width";
+            this.widthDataGridViewTextBoxColumn.HeaderText = "width";
+            this.widthDataGridViewTextBoxColumn.Name = "widthDataGridViewTextBoxColumn";
+            this.widthDataGridViewTextBoxColumn.ReadOnly = true;
+            this.widthDataGridViewTextBoxColumn.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
+            this.widthDataGridViewTextBoxColumn.Width = 52;
+            // 
+            // heightDataGridViewTextBoxColumn
+            // 
+            this.heightDataGridViewTextBoxColumn.DataPropertyName = "height";
+            this.heightDataGridViewTextBoxColumn.HeaderText = "height";
+            this.heightDataGridViewTextBoxColumn.Name = "heightDataGridViewTextBoxColumn";
+            this.heightDataGridViewTextBoxColumn.ReadOnly = true;
+            this.heightDataGridViewTextBoxColumn.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
+            this.heightDataGridViewTextBoxColumn.Width = 59;
+            // 
+            // depthDataGridViewTextBoxColumn
+            // 
+            this.depthDataGridViewTextBoxColumn.DataPropertyName = "depth";
+            this.depthDataGridViewTextBoxColumn.HeaderText = "depth";
+            this.depthDataGridViewTextBoxColumn.Name = "depthDataGridViewTextBoxColumn";
+            this.depthDataGridViewTextBoxColumn.ReadOnly = true;
+            this.depthDataGridViewTextBoxColumn.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
+            this.depthDataGridViewTextBoxColumn.Width = 56;
+            // 
+            // weightDataGridViewTextBoxColumn
+            // 
+            this.weightDataGridViewTextBoxColumn.DataPropertyName = "weight";
+            this.weightDataGridViewTextBoxColumn.HeaderText = "weight";
+            this.weightDataGridViewTextBoxColumn.Name = "weightDataGridViewTextBoxColumn";
+            this.weightDataGridViewTextBoxColumn.ReadOnly = true;
+            this.weightDataGridViewTextBoxColumn.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
+            this.weightDataGridViewTextBoxColumn.Width = 61;
+            // 
+            // mousttypeDataGridViewTextBoxColumn
+            // 
+            this.mousttypeDataGridViewTextBoxColumn.DataPropertyName = "moust_type";
+            this.mousttypeDataGridViewTextBoxColumn.HeaderText = "moust_type";
+            this.mousttypeDataGridViewTextBoxColumn.Name = "mousttypeDataGridViewTextBoxColumn";
+            this.mousttypeDataGridViewTextBoxColumn.ReadOnly = true;
+            this.mousttypeDataGridViewTextBoxColumn.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
+            this.mousttypeDataGridViewTextBoxColumn.Width = 98;
+            // 
+            // powerDataGridViewTextBoxColumn
+            // 
+            this.powerDataGridViewTextBoxColumn.DataPropertyName = "power";
+            this.powerDataGridViewTextBoxColumn.HeaderText = "power";
+            this.powerDataGridViewTextBoxColumn.Name = "powerDataGridViewTextBoxColumn";
+            this.powerDataGridViewTextBoxColumn.ReadOnly = true;
+            this.powerDataGridViewTextBoxColumn.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
+            this.powerDataGridViewTextBoxColumn.Width = 58;
+            // 
+            // webcamDataGridViewTextBoxColumn
+            // 
+            this.webcamDataGridViewTextBoxColumn.DataPropertyName = "webcam";
+            this.webcamDataGridViewTextBoxColumn.HeaderText = "webcam";
+            this.webcamDataGridViewTextBoxColumn.Name = "webcamDataGridViewTextBoxColumn";
+            this.webcamDataGridViewTextBoxColumn.ReadOnly = true;
+            this.webcamDataGridViewTextBoxColumn.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
+            this.webcamDataGridViewTextBoxColumn.Width = 74;
+            // 
             // SelectForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
@@ -482,6 +513,12 @@
         private DollarComputersDataSet dollarComputersDataSet;
         private System.Windows.Forms.BindingSource productsBindingSource;
         private DollarComputersDataSetTableAdapters.productsTableAdapter productsTableAdapter;
+        private System.Windows.Forms.BindingSource productBindingSource;
+        private System.Windows.Forms.Button NextButton;
+        private System.Windows.Forms.Button FormCancelButton;
+        private System.Windows.Forms.Label HardwareListLabel;
+        private System.Windows.Forms.Label SelectionLabel;
+        private System.Windows.Forms.Label label1;
         private System.Windows.Forms.DataGridViewTextBoxColumn productIDDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn costDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn manufacturerDataGridViewTextBoxColumn;
@@ -513,12 +550,6 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn mousttypeDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn powerDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn webcamDataGridViewTextBoxColumn;
-        private System.Windows.Forms.BindingSource productBindingSource;
-        private System.Windows.Forms.Button NextButton;
-        private System.Windows.Forms.Button FormCancelButton;
-        private System.Windows.Forms.Label HardwareListLabel;
-        private System.Windows.Forms.Label SelectionLabel;
-        private System.Windows.Forms.Label label1;
     }
 }
 

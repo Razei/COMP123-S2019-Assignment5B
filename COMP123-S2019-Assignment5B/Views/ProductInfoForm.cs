@@ -79,7 +79,7 @@ namespace COMP123_S2019_Assignment5B.Views
                         InputStream.Close();
                         InputStream.Dispose();
 
-                        NextButton_Click(sender, e);
+                        Program.productInfoForm.NextButton.Enabled = true;
                     }
                 }
                 catch (IOException exception)

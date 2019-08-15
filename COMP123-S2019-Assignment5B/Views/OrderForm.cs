@@ -36,6 +36,7 @@ namespace COMP123_S2019_Assignment5B
 
         private void FinButton_Click(object sender, EventArgs e)
         {
+            MessageBox.Show("Thank you for your business!\n\n\nYour order will be processed in 7-10 business days");
             Application.Exit();
         }
 
@@ -43,6 +44,11 @@ namespace COMP123_S2019_Assignment5B
         {
             Program.productInfoForm.Show();
             this.Hide();
+        }
+
+        private void AboutToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Program.aboutForm.Show();
         }
     }
 }

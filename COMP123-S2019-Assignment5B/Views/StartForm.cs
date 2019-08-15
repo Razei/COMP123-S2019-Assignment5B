@@ -38,6 +38,11 @@ namespace COMP123_S2019_Assignment5B.Views
             this.Hide();
         }
 
+        /// <summary>
+        /// This event handler jumps straight to the ProductInfoForm after opening an OpenFileDialog and reads the data from the text file into the ProductInfoForm labels and the order class
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void OpenOrderButton_Click(object sender, EventArgs e)
         {
             //configure file dialog
@@ -55,26 +60,28 @@ namespace COMP123_S2019_Assignment5B.Views
                     File.Open(Program.productInfoForm.OpenOrderDialog.FileName, FileMode.Open)))
                     {
                         //Read stuff into the class
-                        Program.productInfoForm.ProductIDDisplayLabel.Text = InputStream.ReadLine();
-                        Program.productInfoForm.ConditionDisplayLabel.Text = InputStream.ReadLine();
-                        Program.productInfoForm.CostDisplayLabel.Text = InputStream.ReadLine();
-                        Program.productInfoForm.PlatformDisplayLabel.Text = InputStream.ReadLine();
-                        Program.productInfoForm.OperatingSystemDisplayLabel.Text = InputStream.ReadLine();
-                        Program.productInfoForm.ManufacturerDisplayLabel.Text = InputStream.ReadLine();
-                        Program.productInfoForm.ModelDisplayLabel.Text = InputStream.ReadLine();
-                        Program.productInfoForm.MemoryDisplayLabel.Text = InputStream.ReadLine();
-                        Program.productInfoForm.LCDSizeDisplayLabel.Text = InputStream.ReadLine();
-                        Program.productInfoForm.StorageCapacityDisplayLabel.Text = InputStream.ReadLine();
-                        Program.productInfoForm.CPUBrandDisplayLabel.Text = InputStream.ReadLine();
-                        Program.productInfoForm.CPUNumberDisplayLabel.Text = InputStream.ReadLine();
-                        Program.productInfoForm.GPUTypeDisplayLabel.Text = InputStream.ReadLine();
-                        Program.productInfoForm.CPUTypeDisplayLabel.Text = InputStream.ReadLine();
-                        Program.productInfoForm.CPUSpeedDisplayLabel.Text = InputStream.ReadLine();
-                        Program.productInfoForm.WebcamDisplayLabel.Text = InputStream.ReadLine();
+                        Program.productInfoForm.ProductIDDisplayLabel.Text = Program.order.ProductID = InputStream.ReadLine();
+                        Program.productInfoForm.ConditionDisplayLabel.Text = Program.order.Condition = InputStream.ReadLine();
+                        Program.productInfoForm.CostDisplayLabel.Text = Program.order.Cost = InputStream.ReadLine();
+                        Program.productInfoForm.PlatformDisplayLabel.Text = Program.order.Platform = InputStream.ReadLine();
+                        Program.productInfoForm.OperatingSystemDisplayLabel.Text = Program.order.OperatingSystem = InputStream.ReadLine();
+                        Program.productInfoForm.ManufacturerDisplayLabel.Text = Program.order.Manufacturer = InputStream.ReadLine();
+                        Program.productInfoForm.ModelDisplayLabel.Text = Program.order.Model = InputStream.ReadLine();
+                        Program.productInfoForm.MemoryDisplayLabel.Text = Program.order.Memory = InputStream.ReadLine();
+                        Program.productInfoForm.LCDSizeDisplayLabel.Text = Program.order.LCDSize = InputStream.ReadLine();
+                        Program.productInfoForm.StorageCapacityDisplayLabel.Text = Program.order.StorageCapacity = InputStream.ReadLine();
+                        Program.productInfoForm.CPUBrandDisplayLabel.Text = Program.order.CPUBrand = InputStream.ReadLine();
+                        Program.productInfoForm.CPUNumberDisplayLabel.Text = Program.order.CPUNumber = InputStream.ReadLine();
+                        Program.productInfoForm.GPUTypeDisplayLabel.Text = Program.order.GPUType = InputStream.ReadLine();
+                        Program.productInfoForm.CPUTypeDisplayLabel.Text = Program.order.CPUType = InputStream.ReadLine();
+                        Program.productInfoForm.CPUSpeedDisplayLabel.Text = Program.order.CPUSpeed = InputStream.ReadLine();
+                        Program.productInfoForm.WebcamDisplayLabel.Text = Program.order.Webcam = InputStream.ReadLine();
 
                         //cleanup
                         InputStream.Close();
                         InputStream.Dispose();
+
+                        Program.productInfoForm.NextButton.Enabled = true;
                     }
                 }
                 catch (IOException exception)

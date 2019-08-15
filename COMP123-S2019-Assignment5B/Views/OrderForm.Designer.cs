@@ -130,7 +130,7 @@
             // toolStripSeparator1
             // 
             this.toolStripSeparator1.Name = "toolStripSeparator1";
-            this.toolStripSeparator1.Size = new System.Drawing.Size(137, 6);
+            this.toolStripSeparator1.Size = new System.Drawing.Size(177, 6);
             // 
             // printToolStripMenuItem1
             // 
@@ -138,19 +138,19 @@
             this.printToolStripMenuItem1.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.printToolStripMenuItem1.Name = "printToolStripMenuItem1";
             this.printToolStripMenuItem1.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.P)));
-            this.printToolStripMenuItem1.Size = new System.Drawing.Size(140, 22);
+            this.printToolStripMenuItem1.Size = new System.Drawing.Size(180, 22);
             this.printToolStripMenuItem1.Text = "&Print";
             this.printToolStripMenuItem1.Click += new System.EventHandler(this.PrintToolStripMenuItem1_Click);
             // 
             // toolStripSeparator2
             // 
             this.toolStripSeparator2.Name = "toolStripSeparator2";
-            this.toolStripSeparator2.Size = new System.Drawing.Size(137, 6);
+            this.toolStripSeparator2.Size = new System.Drawing.Size(177, 6);
             // 
             // exitToolStripMenuItem1
             // 
             this.exitToolStripMenuItem1.Name = "exitToolStripMenuItem1";
-            this.exitToolStripMenuItem1.Size = new System.Drawing.Size(140, 22);
+            this.exitToolStripMenuItem1.Size = new System.Drawing.Size(180, 22);
             this.exitToolStripMenuItem1.Text = "E&xit";
             this.exitToolStripMenuItem1.Click += new System.EventHandler(this.ExitToolStripMenuItem1_Click);
             // 
@@ -166,13 +166,13 @@
             // undoToolStripMenuItem
             // 
             this.undoToolStripMenuItem.Name = "undoToolStripMenuItem";
-            this.undoToolStripMenuItem.Size = new System.Drawing.Size(99, 22);
+            this.undoToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.undoToolStripMenuItem.Text = "&Back";
             // 
             // toolStripSeparator3
             // 
             this.toolStripSeparator3.Name = "toolStripSeparator3";
-            this.toolStripSeparator3.Size = new System.Drawing.Size(96, 6);
+            this.toolStripSeparator3.Size = new System.Drawing.Size(177, 6);
             // 
             // helpToolStripMenuItem1
             // 
@@ -185,8 +185,9 @@
             // aboutToolStripMenuItem
             // 
             this.aboutToolStripMenuItem.Name = "aboutToolStripMenuItem";
-            this.aboutToolStripMenuItem.Size = new System.Drawing.Size(116, 22);
+            this.aboutToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.aboutToolStripMenuItem.Text = "&About...";
+            this.aboutToolStripMenuItem.Click += new System.EventHandler(this.AboutToolStripMenuItem_Click);
             // 
             // FinishButton
             // 
@@ -867,45 +868,45 @@
         private System.Windows.Forms.TableLayoutPanel ProductInfoGroupBoxTableLayoutPanel;
         private System.Windows.Forms.Label PlatformLabel;
         private System.Windows.Forms.Label ManufacturerLabel;
-        private System.Windows.Forms.Label ManufacturerDisplayLabel;
-        private System.Windows.Forms.Label PlatformDisplayLabel;
         private System.Windows.Forms.Label ModelLabel;
-        private System.Windows.Forms.Label ModelDisplayLabel;
         private System.Windows.Forms.TableLayoutPanel ProductMetaTableLayout;
-        private System.Windows.Forms.Label ConditionDisplayLabel;
         private System.Windows.Forms.Label ConditionLabel;
         private System.Windows.Forms.Label PriceLabel;
-        private System.Windows.Forms.Label PriceDisplayLabel;
         private System.Windows.Forms.Label MemoryLabel;
         private System.Windows.Forms.Label CPUBrandLabel;
-        private System.Windows.Forms.Label CPUBrandDisplayLabel;
-        private System.Windows.Forms.Label MemoryDisplayLabel;
         private System.Windows.Forms.Label LCDSizeLabel;
         private System.Windows.Forms.Label CPUNumberLabel;
-        private System.Windows.Forms.Label LCDSizeDisplayLabel;
-        private System.Windows.Forms.Label CPUNumberDisplayLabel;
         private System.Windows.Forms.Label StorageCapacityLabel;
         private System.Windows.Forms.Label GPUTypeLabel;
-        private System.Windows.Forms.Label StorageCapacityDisplayLabel;
-        private System.Windows.Forms.Label GPUTypeDisplayLabel;
         private System.Windows.Forms.Label CPUTypeLabel;
-        private System.Windows.Forms.Label CPUTypeDisplayLabel;
         private System.Windows.Forms.Label CPUSpeedLabel;
-        private System.Windows.Forms.Label CPUSpeedDisplayLabel;
         private System.Windows.Forms.Label WebcamLabel;
-        private System.Windows.Forms.Label WebcamDisplayLabel;
         private System.Windows.Forms.GroupBox PriceGroupBox;
         private System.Windows.Forms.GroupBox SystemComponentsGroupBox;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Label OperatingSystemLabel;
-        private System.Windows.Forms.Label OperatingSystemDisplayLabel;
         private System.Windows.Forms.TableLayoutPanel PriceTableLayoutPanel;
         private System.Windows.Forms.Label TaxLabel;
-        private System.Windows.Forms.Label TaxDisplayLabel;
         private System.Windows.Forms.Label TotalPriceLabel;
-        private System.Windows.Forms.Label TotalPriceDisplayLabel;
         private System.Windows.Forms.Button FormCancelButton;
         private System.Windows.Forms.Button FinButton;
         private System.Windows.Forms.Button BackButton;
+        public System.Windows.Forms.Label ManufacturerDisplayLabel;
+        public System.Windows.Forms.Label PlatformDisplayLabel;
+        public System.Windows.Forms.Label ModelDisplayLabel;
+        public System.Windows.Forms.Label ConditionDisplayLabel;
+        public System.Windows.Forms.Label PriceDisplayLabel;
+        public System.Windows.Forms.Label CPUBrandDisplayLabel;
+        public System.Windows.Forms.Label MemoryDisplayLabel;
+        public System.Windows.Forms.Label LCDSizeDisplayLabel;
+        public System.Windows.Forms.Label CPUNumberDisplayLabel;
+        public System.Windows.Forms.Label StorageCapacityDisplayLabel;
+        public System.Windows.Forms.Label GPUTypeDisplayLabel;
+        public System.Windows.Forms.Label CPUTypeDisplayLabel;
+        public System.Windows.Forms.Label CPUSpeedDisplayLabel;
+        public System.Windows.Forms.Label WebcamDisplayLabel;
+        public System.Windows.Forms.Label OperatingSystemDisplayLabel;
+        public System.Windows.Forms.Label TaxDisplayLabel;
+        public System.Windows.Forms.Label TotalPriceDisplayLabel;
     }
 }

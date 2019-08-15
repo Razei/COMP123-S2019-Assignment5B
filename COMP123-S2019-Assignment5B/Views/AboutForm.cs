@@ -7,6 +7,13 @@ using System.Reflection;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
+/*
+ * STUDENT NAME: Jarod Lavine
+ * STUDENT ID: 301037634
+ * DATE: 29-07-2019
+ * DESCRIPTION: This is the AboutForm - this form displays the information about the company and the programmer name
+ */
+
 namespace COMP123_S2019_Assignment5B.Views
 {
     public partial class AboutForm : Form

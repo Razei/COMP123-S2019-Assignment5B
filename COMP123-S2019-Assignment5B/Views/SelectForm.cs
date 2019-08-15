@@ -10,6 +10,13 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
+/*
+ * STUDENT NAME: Jarod Lavine
+ * STUDENT ID: 301037634
+ * DATE: 29-07-2019
+ * DESCRIPTION: This is the SelectForm - this form displays the data from table in the database in a DataGridView and passes info of the selected row to other forms and the Order class
+ */
+
 namespace COMP123_S2019_Assignment5B
 {
     public partial class SelectForm : Form
@@ -54,6 +61,11 @@ namespace COMP123_S2019_Assignment5B
             Application.Exit();
         }
 
+        /// <summary>
+        /// This event handler sends data from the table to the labels on ProductInfoForm and to the Order class
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void NextButton_Click(object sender, EventArgs e)
         {
             this.Hide();
@@ -86,6 +98,11 @@ namespace COMP123_S2019_Assignment5B
             Program.productInfoForm.Show();
         }
 
+        /// <summary>
+        /// THis method sends the data from the cost, manufacturer and model columns in the currently selected row to the SelectionLabel
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void SelectData(object sender, EventArgs e)
         {
             var rowIndex = ProductDataGridView.CurrentCell.RowIndex;
@@ -97,6 +114,11 @@ namespace COMP123_S2019_Assignment5B
             SelectionLabel.Text = manufacturer + " " + model + " " + cost;
         }
 
+        /// <summary>
+        /// This method calls the SelectData method when a selection on the ProductDataGridView is changed and enables the NextButton
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void ProductDataGridView_SelectionChanged(object sender, EventArgs e)
         {
             SelectData(sender,e);

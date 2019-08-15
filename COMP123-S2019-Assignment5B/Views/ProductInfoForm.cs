@@ -12,6 +12,7 @@ using System.Windows.Forms;
 /*
  * STUDENT NAME: Jarod Lavine
  * STUDENT ID: 301037634
+ * DATE: 29-07-2019
  * DESCRIPTION: This is the ProductInfoForm - this form displays the data selected in SelectForm or loaded from a form
  */
 
@@ -47,6 +48,16 @@ namespace COMP123_S2019_Assignment5B.Views
             Program.orderForm.CPUSpeedDisplayLabel.Text = Program.order.CPUSpeed;
             Program.orderForm.WebcamDisplayLabel.Text = Program.order.Webcam;
 
+            if (Program.order.Platform == "Laptop")
+            {
+                Program.orderForm.LaptopPictureBox.Visible = true;
+                Program.orderForm.DesktopPictureBox.Visible = false;
+            }
+            else if (Program.order.Platform == "Desktop PC")
+            {
+                Program.orderForm.DesktopPictureBox.Visible = true;
+                Program.orderForm.LaptopPictureBox.Visible = false;
+            }
             Program.orderForm.TaxDisplayLabel.Text = (Convert.ToDouble(Program.order.Cost) * 0.13).ToString("C2");
             Program.orderForm.TotalPriceDisplayLabel.Text = (Convert.ToDouble(Program.order.Cost) + (Convert.ToDouble(Program.order.Cost) * 0.13)).ToString("C2");
 

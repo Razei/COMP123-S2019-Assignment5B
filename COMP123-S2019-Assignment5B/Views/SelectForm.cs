@@ -29,6 +29,7 @@ namespace COMP123_S2019_Assignment5B
                 MessageBox.Show("Connected to Database");
             }
 
+            NextButton.Enabled = false;
         }
 
         public bool ConnectedToDatabase()
@@ -49,14 +50,30 @@ namespace COMP123_S2019_Assignment5B
 
         private void CancelButton_Click(object sender, EventArgs e)
         {
-            this.Hide();
-            Program.startForm.Show();
+            Application.Exit();
         }
 
         private void NextButton_Click(object sender, EventArgs e)
         {
             this.Hide();
             Program.productInfoForm.Show();
+        }
+
+        private void SelectData(object sender, EventArgs e)
+        {
+            var rowIndex = ProductDataGridView.CurrentCell.RowIndex;
+            var columnIndex = ProductDataGridView.CurrentCell.ColumnIndex;
+
+            var cost = ProductDataGridView[1, rowIndex].Value.ToString();
+            var manufacturer = ProductDataGridView[2, rowIndex].Value.ToString();
+            var model = ProductDataGridView[3, rowIndex].Value.ToString();
+            SelectionLabel.Text = manufacturer + " " + model + " " + cost;
+        }
+
+        private void ProductDataGridView_SelectionChanged(object sender, EventArgs e)
+        {
+            SelectData(sender,e);
+            NextButton.Enabled = true;
         }
     }
 }

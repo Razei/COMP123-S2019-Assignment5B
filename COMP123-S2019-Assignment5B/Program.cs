@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using COMP123_S2019_Assignment5B.Data;
 using COMP123_S2019_Assignment5B.Models;
 using COMP123_S2019_Assignment5B.Views;
 
@@ -17,6 +18,7 @@ namespace COMP123_S2019_Assignment5B
         public static ProductInfoForm productInfoForm;
         public static AboutForm aboutForm;
         public static SplashForm splashForm;
+        public static Order order;
 
         //generated database class
         public static Product product;
@@ -37,6 +39,7 @@ namespace COMP123_S2019_Assignment5B
             aboutForm = new AboutForm();
             splashForm = new SplashForm();
             product = new Product();
+            order = new Order();
 
 
             Application.Run(splashForm);
